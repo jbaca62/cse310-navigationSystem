@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1541626464 source:/home/jacob/git/cse310-navigationSystem/navigationSystem/src/Element.cpp
+	"Element.h"
+
+1541626488 /home/jacob/git/cse310-navigationSystem/navigationSystem/include/Element.h
+
