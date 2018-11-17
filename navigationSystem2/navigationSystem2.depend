@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1542481092 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\element.cpp
+	"Element.h"
+
+1542481177 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\element.h
+
+1542484498 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"util.h"
+	"Heap.h"
+	"Element.h"
+
+1542482028 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\util.h
+	"Element.h"
+
+1542483748 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\heap.h
+	"Element.h"
+
+1542483821 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\heap.cpp
+	"Heap.h"
+	<iostream>
+	<math.h>
+
+1542484880 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\util.cpp
+	<iostream>
+	<fstream>
+	"Element.h"
+
+1542484818 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\graph.cpp
+	"Graph.h"
+
+1542484812 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\graph.h
+
