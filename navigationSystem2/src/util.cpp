@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "Element.h"
+#include "Edge.h"
 
 using namespace std;
 
@@ -16,7 +17,6 @@ int nextCommand(int *i, int *v, int *f)
             break;
         }
         if(c == 'R' || c == 'r'){
-            scanf("%d", f);
             break;
         }
         if(c == 'P' || c == 'p'){
@@ -30,26 +30,32 @@ int nextCommand(int *i, int *v, int *f)
 }
 
 //reads from
-Element* read_input_text(){
+Edge* read_input_text(){
     ifstream text_file("Ginput.txt");
     if(!text_file.is_open()){
         cout << "There was a problem opening file Ginput.txt for reading." << endl;
         return 0;
     }
-    int a_size;
-    text_file >> a_size;
-    Element* e = new Element[a_size + 1];
-    e[0].set_key(a_size);
-    for(int i = 1; i <= a_size; i++){
+    int n_size;
+    int m_size;
+    text_file >> n_size;
+    text_file >> m_size;
+    cout << "N: " << n_size << " M: " << m_size << endl;
+    Edge* vertices = new Edge[n_size +1];
+    vertices[0].set_index(n_size);
+    vertices[0].set_weight(m_size);
+    for(int i = 1; i <= m_size; i++){
         if(text_file.eof()){
             cout << "Sorry!!! It cannot be done. The number of elements in the file is less than as specified in the beginning of the file." << endl;
             return 0;
         }
-        int x;
-        text_file >> x;
-        e[i] = Element(x);
+        int u, v, w;
+        text_file >> u;
+        text_file >> v;
+        text_file >> w;
+        vertices[u].add_edge(v, w);
     }
     text_file.close();
-    return e;
+    return vertices;
 
 }

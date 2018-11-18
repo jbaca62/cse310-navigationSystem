@@ -2,18 +2,45 @@
 
 Element::Element()
 {
-    this->key = 0;
+    this->next = 0;
 }
 
-Element::Element(int k){
-    key = k;
+Element::Element(int i){
+    index = i;
 }
 
-int Element::get_key(){
-    return key;
+Element::Element(int u , int v, int w){
+    index = u;
+    weight = w;
+    next_index = v;
+    next = 0;
 }
 
-void Element::set_key(int k){
-    key = k;
+int Element::get_index(){
+    return index;
+}
+
+int Element::get_weight(){
+    return weight;
+}
+
+int Element::get_next_index(){
+    return next_index;
+}
+
+void Element::set_next(Element *n){
+    next = n;
+}
+
+void Element::set_weight(int w){
+    weight = w;
+}
+
+void Element::set_index(int i){
+    index = i;
+}
+
+void Element::set_next_index(int i){
+    next_index = i;
 }
 

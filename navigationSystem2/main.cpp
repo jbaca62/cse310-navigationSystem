@@ -4,14 +4,14 @@
 #include "util.h"
 #include "Heap.h"
 #include "Element.h"
+#include "Graph.h"
 
 using namespace std;
 
 int main()
 {
-    Heap heap;
-    heap = Heap::initialize(5);
-    bool heap_is_initialized = true;
+    Graph graph;
+    bool graph_is_initialized = false;
     // varialbles for the fparser...
     char c;
     int i, v, f;
@@ -29,38 +29,32 @@ int main()
 
             case 'w':
                 printf("COMMAND: %c.\n", c);
-                heap.print_heap();
+                graph.print_graph();
                 continue;
             case 'W':
                 printf("COMMAND: %c.\n", c);
-                if(!heap_is_initialized){
-                    cout << "Sorry!!! It cannot be done. Please initialize the heap first." << endl;
+                if(!graph_is_initialized){
+                    cout << "Sorry!!! It cannot be done. Please initialize the graph first." << endl;
                     break;
                 }
                 //will need to be changed to print graph
-                heap.print_heap();
+                graph.print_graph();
                 continue;
 
             case 'R':
                 {
-                printf("COMMAND: %c %d.\n", c, f);
-                if(!heap_is_initialized){
-                    cout << "Sorry!!! It cannot be done. Please initialize the heap first." << endl;
-                    break;
-                }
+                printf("COMMAND: %c.\n", c);
                 //heap.build_heap(e, 4, i);
-                Element* e = read_input_text();
-                if(e == 0){
+                Edge* v = read_input_text();
+                if(v == 0){
                     break;
                 }
-                int e_size = e[0].get_key();
-                if(e_size > heap.get_capacity()){
-                    printf("Sorry!!! It cannot be done. Please increase the capacity of the heap first.\n");
-                    break;
+                int n_size = v[0].get_index();
+                int m_size = v[0].get_weight();
+                graph = Graph::initialize(n_size, m_size);
+                graph.build_graph(n_size, m_size, v);
                 }
-                heap.build_heap(e, e_size, f);
-                delete e;
-                }
+                graph_is_initialized = true;
                 continue;
 
             case 'P':

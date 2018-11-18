@@ -29,13 +29,13 @@ void Heap::min_heapify(int i){
     int l = left(i);
     int r = right(i);
     int smallest;
-    if(l <= size && H[l].get_key() < H[i].get_key()){
+    if(l <= size && H[l].get_weight() < H[i].get_weight()){
         smallest = l;
     }
     else{
         smallest = i;
     }
-    if(r <= size && H[r].get_key() < H[smallest].get_key()){
+    if(r <= size && H[r].get_weight() < H[smallest].get_weight()){
         smallest = r;
     }
     if(smallest != i){
@@ -67,7 +67,7 @@ void Heap::print_heap(){
     printf("The capacity is %d.\n", this->capacity);
     printf("The size is %d.\n", this->size);
     for(int i = 1; i <= this->size; i++){
-        int key = (H + i)->get_key();
+        int key = (H + i)->get_weight();
         printf("%d\n", key);
     }
 }
@@ -76,14 +76,14 @@ void Heap::decrease_key(int i, int k, int f){
     if(size < i){
         printf("There are only %d elements in the heap. Hence this operation cannot be completed.\n", size);
     }
-    if(k > H[i].get_key()){
+    if(k > H[i].get_index()){
        printf("new key is larger than current key");
     }
     if(f == 1){
         print_heap();
     }
-    H[i].set_key(k);
-    while(i > 1 && H[parent(i)].get_key() < H[i].get_key()){
+    H[i].set_index(k);
+    while(i > 1 && H[parent(i)].get_index() < H[i].get_index()){
         Element temp = H[i];
         H[i] = H[parent(i)];
         H[parent(i)] = temp;
