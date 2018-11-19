@@ -13,7 +13,7 @@ Graph::Graph(int n, int m)
 {
     this->n = n;
     this->m = m;
-    this->vertices = new Edge[n];
+    this->edges = new Edge*[n + 1];
 }
 
 
@@ -23,20 +23,23 @@ Graph Graph::initialize(int n, int m){
 }
 
 void Graph::build_graph(int n, int m, Edge* v){
-        vertices = v;
+        for(int i = 1; i <= v->get_index(); i++){   //size of array stored in v[0]
+            //creating graph in this way requires that Edges already have memory allocated
+            edges[i] = &v[i];
+        }
 }
 
 void Graph::print_graph(){
     cout << "Vertice Size: " << this->n << " Edge Size: " << this->m << endl;
     for(int i = 1; i <= n; i++){
         cout << i << ": ";
-        Edge e = vertices[i];
-        if(e.get_index() != 0){
+        if(edges[i] != 0){
+            Edge e = *edges[i];
             while(e.get_next() != 0){
                 cout << "(" << e.get_index() << "," << e.get_weight() << "); ";
                 e = *e.get_next();
             }
-            cout <<"(" << e.get_index() << "," <<e.get_weight() << ")" <<  endl;
+            cout <<"(" << e.get_index() << "," << e.get_weight() << ")" <<  endl;
         }
         else{
             cout << endl;
@@ -65,12 +68,12 @@ string Graph::shortest_path(int start, int finish, int flag){
 
 
 void initialize_single_source(int start){
-    Vertex* v = new Vertex[n+1];
+    //Vertex* v = new Vertex[n+1];
     //create Vertex for each vertex in Graph
-    for(int i = 1; i <= n; i++){
-        v[i] = Vertex();
-    }
-    v[start].distance = 0;
+    //for(int i = 1; i <= n; i++){
+    //    v[i] = Vertex();
+    //}
+    //v[start].distance = 0;
     //psuedo code
     //for each vertex v in G.V
     //  v.d = inf

@@ -2,6 +2,7 @@
 #define GRAPH_H
 #include "Element.h"
 #include "Edge.h"
+#include "Vertex.h"
 #include <iostream>
 
 using namespace std;
@@ -22,8 +23,8 @@ class Graph
     private:
         int n; //number of vertices, size of G
         int m; //number of edges
-        // may implement vertices as array of pointers
-        Edge *vertices;
+        Edge **edges;
+        Vertex *vertices;
 
 };
 

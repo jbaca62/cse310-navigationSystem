@@ -47,3 +47,57 @@
 	<iostream>
 	"Edge.h"
 
+1542649455 source:/home/jacob/git/cse310-navigationSystem/navigationSystem2/main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"util.h"
+	"Heap.h"
+	"Element.h"
+	"Graph.h"
+
+1542649455 /home/jacob/git/cse310-navigationSystem/navigationSystem2/include/util.h
+	"Element.h"
+	"Edge.h"
+
+1542649455 /home/jacob/git/cse310-navigationSystem/navigationSystem2/include/Element.h
+
+1542649455 /home/jacob/git/cse310-navigationSystem/navigationSystem2/include/Edge.h
+
+1542649455 /home/jacob/git/cse310-navigationSystem/navigationSystem2/include/Heap.h
+	"Element.h"
+
+1542649541 /home/jacob/git/cse310-navigationSystem/navigationSystem2/include/Graph.h
+	"Element.h"
+	"Edge.h"
+	<iostream>
+
+1542649455 source:/home/jacob/git/cse310-navigationSystem/navigationSystem2/src/Edge.cpp
+	<iostream>
+	"Edge.h"
+
+1542649455 source:/home/jacob/git/cse310-navigationSystem/navigationSystem2/src/Element.cpp
+	"Element.h"
+
+1542649455 source:/home/jacob/git/cse310-navigationSystem/navigationSystem2/src/Heap.cpp
+	"Heap.h"
+	<iostream>
+	<math.h>
+
+1542649455 source:/home/jacob/git/cse310-navigationSystem/navigationSystem2/src/util.cpp
+	<iostream>
+	<fstream>
+	"Element.h"
+	"Edge.h"
+
+1542650382 source:/home/jacob/git/cse310-navigationSystem/navigationSystem2/src/Graph.cpp
+	<iostream>
+	"Graph.h"
+	"Heap.h"
+	"Vertex.h"
+
+1542649455 /home/jacob/git/cse310-navigationSystem/navigationSystem2/include/Vertex.h
+
+1542649455 source:/home/jacob/git/cse310-navigationSystem/navigationSystem2/src/Vertex.cpp
+	"Vertex.h"
+
