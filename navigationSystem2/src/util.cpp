@@ -40,7 +40,6 @@ Edge* read_input_text(){
     int m_size;
     text_file >> n_size;
     text_file >> m_size;
-    cout << "N: " << n_size << " M: " << m_size << endl;
     Edge* vertices = new Edge[n_size +1];
     vertices[0].set_index(n_size);
     vertices[0].set_weight(m_size);

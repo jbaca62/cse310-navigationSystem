@@ -2,7 +2,9 @@
 #define GRAPH_H
 #include "Element.h"
 #include "Edge.h"
+#include <iostream>
 
+using namespace std;
 
 class Graph
 {
@@ -15,11 +17,13 @@ class Graph
         void print_graph();
         int get_n();
         Element * get_G();
+        string shortest_path(int, int, int);
 
     private:
         int n; //number of vertices, size of G
         int m; //number of edges
-        Edge* vertices;
+        // may implement vertices as array of pointers
+        Edge *vertices;
 
 };
 

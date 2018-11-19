@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1542495286 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\element.cpp
+1542603470 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\element.cpp
 	"Element.h"
 
-1542495247 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\element.h
+1542603501 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\element.h
 
 1542518394 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\main.cpp
 	<iostream>
@@ -20,28 +20,30 @@
 1542483748 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\heap.h
 	"Element.h"
 
-1542495219 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\heap.cpp
+1542603574 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\heap.cpp
 	"Heap.h"
 	<iostream>
 	<math.h>
 
-1542519467 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\util.cpp
+1542604570 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\util.cpp
 	<iostream>
 	<fstream>
 	"Element.h"
 	"Edge.h"
 
-1542520301 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\graph.cpp
+1542640847 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\graph.cpp
 	<iostream>
 	"Graph.h"
+	"Heap.h"
 
-1542518423 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\graph.h
+1542640936 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\graph.h
 	"Element.h"
 	"Edge.h"
+	<iostream>
 
 1542520176 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\edge.h
 
-1542520717 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\edge.cpp
+1542606575 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\edge.cpp
 	<iostream>
 	"Edge.h"
 

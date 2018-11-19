@@ -21,7 +21,6 @@ void Edge::add_edge(int i, int w){
         weight = w;
     }
     else if(next == 0){
-        cout << "Edge.next is 0" << endl;
         next = new Edge(i, w);
     }
     else{
