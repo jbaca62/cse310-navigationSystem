@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Graph.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
 
 using namespace std;
 
@@ -58,13 +60,16 @@ void Graph::print_graph(){
 //implementation of dijkstra's shortest path algorithm
 string Graph::shortest_path(int start, int finish, int flag){
     if((flag != 0 && flag != 1) && (start > n || finish > n)){
-        return "Error: One or more of nodes is invalid.\nError: Invalid flag value.";
+        cout << "Error: One or more of nodes is invalid.\nError: Invalid flag value." << endl;
+        return "";
     }
     if((flag != 0 && flag != 1)){
-        return "Error: Invalid flag value.";
+        cout << "Error: Invalid flag value." << endl;
+        return "";
     }
     if(start > n || finish > n){
-        return "Error: One or more of nodes is invalid.";
+        cout << "Error: One or more of nodes is invalid." << endl;
+        return "";
     }
 
     string str = "";
@@ -112,22 +117,29 @@ string Graph::shortest_path(int start, int finish, int flag){
         }
     }
     if(S[s_size].get_distance() == 2147483647){
-        str = "Sorry, node " + to_string(finish) + " is not reachable from node " + to_string(start) + ".";
+        cout << "Sorry, node " << finish << " is not reachable from node " << start << "." << endl;
         return str;
     }
     if(flag == 0){
         Vertex v = S[s_size];
-        str = "LENGTH: " + to_string(v.get_distance());
+        cout << "LENGTH: " << v.get_distance() << endl;
     }
 
     if(flag == 1){
         Vertex* v = &S[s_size];
-        str = to_string(v->get_index());
+        int str[20];
+        str[0] = v->get_index();
+        int str_size = 0;
         while(v->get_previous() != 0){
             v = v->get_previous();
-            str = to_string(v->get_index()) + ", " + str;
+            str_size++;
+            str[str_size] = v->get_index();
         }
-        str = "PATH: " + str;
+        cout << "PATH: ";
+        for(int i = str_size; i > 0; i--){
+            cout << str[i] << ", ";
+        }
+        cout << str[0] << endl;
     }
     //psuedo code
     //initialize single source
@@ -168,6 +180,7 @@ string Graph::shortest_path(int start, int finish, int flag){
 int Graph::get_n(){
     return this->n;
 }
+
 
 
 

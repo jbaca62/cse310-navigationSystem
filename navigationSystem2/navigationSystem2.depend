@@ -4,13 +4,12 @@
 
 1542744813 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\element.h
 
-1542866180 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\main.cpp
+1542886089 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\main.cpp
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
 	"util.h"
 	"Heap.h"
-	"Element.h"
 	"Graph.h"
 
 1542642712 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\util.h
@@ -21,23 +20,26 @@
 	"Element.h"
 	"Vertex.h"
 
-1542790228 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\heap.cpp
+1542885244 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\heap.cpp
 	"Heap.h"
 	<iostream>
 	<math.h>
+	<stdio.h>
+	<stdlib.h>
 
-1542866294 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\util.cpp
+1542880415 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\util.cpp
 	<iostream>
 	<fstream>
-	"Element.h"
 	"Edge.h"
 
-1542877991 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\graph.cpp
+1542886056 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\graph.cpp
 	<iostream>
 	"Graph.h"
+	<stdio.h>
+	<stdlib.h>
+	<string>
 
-1542744587 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\graph.h
-	"Element.h"
+1542880397 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\graph.h
 	"Edge.h"
 	"Vertex.h"
 	"Heap.h"
@@ -106,7 +108,9 @@
 1542856435 c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\include\vertex.h
 	"Edge.h"
 
-1542866702 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\vertex.cpp
+1542885091 source:c:\users\bacaj\documents\github\cse310-navigationsystem\navigationsystem2\src\vertex.cpp
 	"Vertex.h"
 	<iostream>
+	<stdio.h>
+	<stdlib.h>
 

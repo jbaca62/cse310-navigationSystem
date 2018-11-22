@@ -62,7 +62,7 @@ int main()
                     cout << "Error: There is no graph to run Dijkstra's algorithm on." << endl;
                     break;
                 }
-                cout << graph.shortest_path(i,v, f) << endl;
+                graph.shortest_path(i,v, f);
                 continue;
             case 'p':
                 printf("COMMAND: %c %d %d %d", c, i, v, f);
