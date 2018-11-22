@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include "Element.h"
 #include "Edge.h"
 
 using namespace std;
@@ -40,21 +39,21 @@ Edge* read_input_text(){
     int m_size;
     text_file >> n_size;
     text_file >> m_size;
-    Edge* vertices = new Edge[n_size +1];
-    vertices[0].set_index(n_size);
-    vertices[0].set_weight(m_size);
+    Edge* edges = new Edge[n_size +1 ];
+    edges[0].set_index(n_size);
+    edges[0].set_weight(m_size);
     for(int i = 1; i <= m_size; i++){
         if(text_file.eof()){
-            cout << "Sorry!!! It cannot be done. The number of elements in the file is less than as specified in the beginning of the file." << endl;
+            cout << "Error: The number of edges is less than as specified in the beginning of the file." << endl;
             return 0;
         }
         int u, v, w;
         text_file >> u;
         text_file >> v;
         text_file >> w;
-        vertices[u].add_edge(v, w);
+        edges[u].add_edge(v, w);
     }
     text_file.close();
-    return vertices;
+    return edges;
 
 }

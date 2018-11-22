@@ -1,8 +1,8 @@
 #ifndef GRAPH_H
 #define GRAPH_H
-#include "Element.h"
 #include "Edge.h"
 #include "Vertex.h"
+#include "Heap.h"
 #include <iostream>
 
 using namespace std;
@@ -19,6 +19,7 @@ class Graph
         int get_n();
         Element * get_G();
         string shortest_path(int, int, int);
+        Vertex* initialize_single_source(int);
 
     private:
         int n; //number of vertices, size of G

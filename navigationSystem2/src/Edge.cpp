@@ -19,6 +19,7 @@ void Edge::add_edge(int i, int w){
     if(index == 0){
         index = i;
         weight = w;
+        next = 0;
     }
     else if(next == 0){
         next = new Edge(i, w);
@@ -40,10 +41,12 @@ Edge* Edge::get_next(){
     return next;
 }
 
-void Edge::set_index(int i){
-    index =i;
+void Edge::
+    set_index(int i){
+    index = i;
 }
 
 void Edge::set_weight(int w){
     weight = w;
 }
+

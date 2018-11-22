@@ -2,23 +2,27 @@
 #define HEAP_H
 
 #include "Element.h"
+#include "Vertex.h"
 
 
 class Heap
 {
     public:
         Heap();
-        Heap(int, int, Element*);
-        void build_heap(Element*, int, int);
-        static Heap initialize(int n);
+        Heap(int, int, Vertex*);
+        void build_heap(Vertex*, int, int);
+        static Heap initialize(int, Vertex*);
         void min_heapify(int);
         void print_heap();
         void decrease_key(int, int, int);
         void heap_insert(int, int);
-        Element delete_min(int);
-        bool add_element(Element, int);
-        void set_H(Element*);
+        Vertex delete_min(int);
+        Vertex* get_vertex(int);
+        //bool add_element(Element, int);
+        void set_H(Vertex*);
         int get_capacity();
+        int get_size();
+        Vertex* get_H();
         static int parent(int);
         static int left(int);
         static int right(int);
@@ -29,7 +33,7 @@ class Heap
     private:
         int capacity;
         int size;
-        Element *H;
+        Vertex *H;
 };
 
 #endif // HEAP_H

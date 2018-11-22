@@ -1,7 +1,6 @@
 #ifndef EDGE_H
 #define EDGE_H
 
-#include "Vertex.h"
 
 
 class Edge
@@ -18,8 +17,7 @@ class Edge
 
 
     private:
-        Vertex* to_vertex;
-        //int index;
+        int index;
         int weight;
         Edge* next;
 };

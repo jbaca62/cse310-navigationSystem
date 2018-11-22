@@ -8,13 +8,13 @@ class Element
         Element();
         Element(int);
         int get_key();
+        int get_index();
         void set_key(int);
-
-
-    protected:
+        void set_index(int);
 
     private:
         int key;
+        int index;
 };
 
 #endif // ELEMENT_H

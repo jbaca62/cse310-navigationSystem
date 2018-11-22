@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include "util.h"
 #include "Heap.h"
-#include "Element.h"
 #include "Graph.h"
 
 using namespace std;
@@ -34,7 +33,7 @@ int main()
             case 'W':
                 printf("COMMAND: %c.\n", c);
                 if(!graph_is_initialized){
-                    cout << "Sorry!!! It cannot be done. Please initialize the graph first." << endl;
+                    cout << "Error: There is no graph to print." << endl;
                     break;
                 }
                 //will need to be changed to print graph
@@ -58,8 +57,12 @@ int main()
                 continue;
 
             case 'P':
-                printf("COMMAND: %c %d %d %d", c, i, v, f);
-                cout << "Command not written" << endl;
+                printf("COMMAND: %c %d %d %d.\n", c, i, v, f);
+                if(!graph_is_initialized){
+                    cout << "Error: There is no graph to run Dijkstra's algorithm on." << endl;
+                    break;
+                }
+                cout << graph.shortest_path(i,v, f) << endl;
                 continue;
             case 'p':
                 printf("COMMAND: %c %d %d %d", c, i, v, f);
